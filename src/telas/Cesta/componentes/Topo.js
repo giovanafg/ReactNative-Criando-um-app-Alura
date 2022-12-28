@@ -8,12 +8,12 @@ import topo from '../../../../assets/topo.png/';
 /*DIMENSIONS FAZ COM QUE A IMAGEM FIQUE DO TAMANHO PRoPORCIONAL DE QUALQUER TELA DE CELULAR*/
 const width = Dimensions.get('screen').width;
 
-/*FUNÇÃO*/
-export default function Topo(){
+/*FUNÇÃO - PARA CONSEGUIR PUXAR O TEXTO DO ARQUIVO MOCKS/CESTA, FOI NECESSÁRIO CHAMAR DENTRO DA FUNÇÃO O PARÂMETRO*/
+export default function Topo({ titulo }){
     return <>
         {/*IMAGEM E TEXTO INCIAL*/}
         <Image source={topo} style={estilos.topo} />
-        <Text style={estilos.titulo}>Detalhes da cesta</Text>
+        <Text style={estilos.titulo}>{titulo}</Text>
     </>
 }
 
