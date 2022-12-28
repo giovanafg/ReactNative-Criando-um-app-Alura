@@ -1,8 +1,8 @@
 Arguments: 
-  /home/technocorp/.nvm/versions/node/v14.17.2/bin/node /snap/node/6895/bin/yarn.js add react-native-web@~0.18.9 react-dom@18.1.0 @expo/webpack-config@^0.17.2
+  /home/technocorp/.nvm/versions/node/v14.17.2/bin/node /snap/node/6895/bin/yarn.js add expo-font@~11.0.1 @expo-google-fonts/
 
 PATH: 
-  /home/technocorp/Documentos/projetos/front-end/React/orgs-cesta/node_modules/.bin:/home/technocorp/.nvm/versions/node/v14.17.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /home/technocorp/.nvm/versions/node/v14.17.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
   1.22.19
