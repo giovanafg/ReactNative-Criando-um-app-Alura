@@ -1,14 +1,25 @@
 /*IMPORT PARA CONSEGUIR RODAR AS FUNÇÕES*/
 import React from 'react';
-import { View, Image, StyleSheet, Text} from 'react-native';
+import { StyleSheet, Image, Dimensions, Text, View } from 'react-native';
 
-/*IMPORT DA IMAGEM*/
-import logo from '../../../../assets/logo.png';
+/*IMPORT DAS IMAGENS QUE ESTÃO SENDO USADAS NA PÁGINA*/
+import topo from '../../assets/topo.png/';
+import logo from '../../assets/logo.png'
 
-/*FUNÇÃO*/
-export default function Detalhes(){
+/*DIMENSIONS FAZ COM QUE A IMAGEM FIQUE DO TAMANHO PRoPORCIONAL DE QUALQUER TELA DE CELULAR*/
+const width = Dimensions.get('screen').width;
+
+/*É PRECISO EXPORTAR O COMPONETE PARA QUE CONSIGAMOS USÁ-LO*/
+/*DEFAULT É O EXPORT PADRÃO DO ARQUIVO,ENTÃO SÓ PODE TER UM*/
+
+export default function Cesta() {
     return <>
-          {/*DESCRIÇÃO DO PRODUTO*/}
+        {/*IMAGEM E TEXTO INCIAL*/}
+        <Image source={topo} style={estilos.topo} />
+        <Text style={estilos.titulo}>Detalhes da cesta</Text>
+
+        {/*DESCRIÇÃO DO PRODUTO*/}
+        <View style={estilos.cesta}>
             <Text style={estilos.nome} >Cesta de verduras</Text>
 
             {/*VIEW PARA ARMAZENAR COTEÚDO COM NOME DA FAZENDA E ICONE*/}
@@ -20,12 +31,37 @@ export default function Detalhes(){
             <Text style={estilos.descricao}>Uma cesta com produtos selecionados 
                 cuidadosamente da fazenda para sua cozinha
             </Text>
-            <Text style={estilos.preco}>R$40,00</Text>    
+            <Text style={estilos.preco}>R$40,00</Text>
+        </View>
     </>
 }
 
-/*ESTILO*/
 const estilos = StyleSheet.create({
+    /*IMAGEM PRINCIPAL*/
+    topo: {
+        width: "100%",
+        /**NO HEIGHT FOI PEGO A ALTURA DA IMAGEM DIVIDO PELA LARGURA DA IMAGEM E MULTIPLICADO PELO WIDTH */
+        height: 578 / 768 * width,
+    },
+
+    /*TITULO*/
+    titulo: {
+        width: "100%",
+        position: "absolute",
+        textAlign: "center",
+        fontSize: 16,
+        lineHeight: 26,
+        color: "white",
+        fontWeight: "bold",
+        padding: 16,
+    },
+
+    /*VIEW (CESTA)*/
+    cesta: {
+        paddingVertical: 8,
+        paddingHorizontal: 16,
+    },
+
     /*NOME*/
     nome: {
         lineHeight: 42,
@@ -69,4 +105,6 @@ const estilos = StyleSheet.create({
         lineHeight: 42,
         marginTop: 8,
     },
+
 });
+
