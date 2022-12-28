@@ -2,25 +2,20 @@
 import React from 'react';
 import { View, Image, StyleSheet, Text} from 'react-native';
 
-/*IMPORT DA IMAGEM*/
-import logo from '../../../../assets/logo.png';
-
-/*FUNÇÃO*/
-export default function Detalhes(){
+/*FUNÇÃO - PARA CONSEGUIR PUXAR O TEXTO/IMG DO ARQUIVO MOCKS/CESTA, FOI NECESSÁRIO CHAMAR DENTRO DA FUNÇÃO OS PARÂMETROS*/
+export default function Detalhes({ nome, logoFazenda, nomeFazenda, descricao, preco }){
     return <>
           {/*DESCRIÇÃO DO PRODUTO*/}
-            <Text style={estilos.nome} >Cesta de verduras</Text>
+            <Text style={estilos.nome}>{nome}</Text>
 
             {/*VIEW PARA ARMAZENAR COTEÚDO COM NOME DA FAZENDA E ICONE*/}
             <View style={estilos.fazenda}>
-                <Image source={logo} style={estilos.imagemFazenda} />
-                <Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
+                <Image source={logoFazenda} style={estilos.imagemFazenda} />
+                <Text style={estilos.nomeFazenda}>{nomeFazenda}</Text>
             </View>
             
-            <Text style={estilos.descricao}>Uma cesta com produtos selecionados 
-                cuidadosamente da fazenda para sua cozinha
-            </Text>
-            <Text style={estilos.preco}>R$40,00</Text>    
+            <Text style={estilos.descricao}>{descricao}</Text>
+            <Text style={estilos.preco}>{preco}</Text>    
     </>
 }
 

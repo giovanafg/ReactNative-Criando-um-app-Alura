@@ -7,13 +7,15 @@ import Detalhes from './componentes/Detalhes';
 /*É PRECISO EXPORTAR O COMPONETE PARA QUE CONSIGAMOS USÁ-LO*/
 /*DEFAULT É O EXPORT PADRÃO DO ARQUIVO,ENTÃO SÓ PODE TER UM*/
 
-/*FUNÇÃO*/
-export default function Cesta() {
+/*VIZUALIZAÇÃO DA MINHA PÁGINA CESTA*/
+
+/*FUNÇÃO - FOI NECESSÁRIO CHAMAR OS PARÂMETROS DENTRO DE CADA OBJETO, PARA ASSIM CONSEGUIR UTILIZAR*/
+export default function Cesta({ topo, detalhes}) {
     return <>
-        <Topo />
+        <Topo {...topo} />
 
         <View style={estilos.cesta}>
-            <Detalhes />
+            <Detalhes {...detalhes} />
         </View>
 
     </>
