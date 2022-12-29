@@ -6,7 +6,7 @@ import mock from './src/mocks/cesta'
 /**VIZUALIZAÇÃO DO MEU APP COMPLETO*/
 export default function App() {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex: 1}}>
       <StatusBar/>
       <Cesta {...mock} />
     </SafeAreaView>
