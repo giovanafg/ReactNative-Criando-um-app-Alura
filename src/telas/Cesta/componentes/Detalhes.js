@@ -1,12 +1,12 @@
 /*IMPORT PARA CONSEGUIR RODAR AS FUNÇÕES*/
 import React from 'react';
-import { View, Image, Text} from 'react-native';
+import { View, Image, Text, TouchableOpacity} from 'react-native';
 
 import estilos from './StylesDetalhes.js';
 
 
 /*FUNÇÃO*/
-export default function Detalhes({nome, logoFazenda, nomeFazenda, descricao, preco }){
+export default function Detalhes({nome, logoFazenda, nomeFazenda, descricao, preco, botao }){
     return <>
           {/*DESCRIÇÃO DO PRODUTO*/}
             <Text style={estilos.nome} >{nome}</Text>
@@ -18,6 +18,10 @@ export default function Detalhes({nome, logoFazenda, nomeFazenda, descricao, pre
             </View>
             
             <Text style={estilos.descricao}>{descricao}</Text>
-            <Text style={estilos.preco}>{preco}</Text>    
+            <Text style={estilos.preco}>{preco}</Text>
+
+            <TouchableOpacity style={estilos.botao} onPress={() => {}}>
+                <Text style={estilos.textBotao}>{botao}</Text>
+            </TouchableOpacity>
     </>
 };

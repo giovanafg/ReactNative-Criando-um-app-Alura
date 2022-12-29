@@ -45,6 +45,22 @@ const estilos = StyleSheet.create({
         lineHeight: 42,
         marginTop: 8,
     },
+
+    /*BOTÃO*/
+    botao: {
+        marginTop: 16,
+        backgroundColor: "#2A9F85",
+        padding: 16,
+        borderRadius: 6,
+    },
+
+    textBotao: {
+        textAlign: "center",
+        color: "#FFFFFF",
+        fontWeight: "bold",
+        fontSize: 16,
+        lineHeight: 26,
+    }
 });
 
 export default estilos;
